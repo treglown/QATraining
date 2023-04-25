@@ -6,7 +6,7 @@ def tax_calculator(pay, percentage):
 def getIncomeTax(income: float)->float:
     if income <= personal_allowance:
         return 0 
-    elif  income <= 34500:
+    elif  income > personal_allowance and income <34500:
         return tax_calculator (income, 20) 
     elif income > 34500 and income < 150000:
         return tax_calculator(income, 40) 
@@ -18,5 +18,3 @@ def getIncomeTax(income: float)->float:
 income = float(input("Input your annual income: £")) - personal_allowance
 calculated_tax = getIncomeTax(income) 
 print(f"Your annual tax is £{calculated_tax}")  
-
-
