@@ -8,7 +8,7 @@ class Student:
         self.test_results2 = test_results2
         self.test_results3 = test_results3
 
-        self.average_grade_mark = test_results1 + test_results2 + test_results3 / 3
+        self.average_grade_mark = test_results1 + test_results2 + test_results3 / 300 * 100
         
 student1 = Student("Jack", 22, "Classroom B12", 2, 20, 40)
 student2 = Student("John", 21, "Classroom B11", 60, 50, 66)
