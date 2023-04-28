@@ -3,7 +3,7 @@ import csv
 companies = []
 sales = []
 
-with open('output.csv', newline='') as csvfile:
+with open('carSale.csv', newline='') as csvfile:
     reader = csv.reader(csvfile)
     next(reader)
     for row in reader:
