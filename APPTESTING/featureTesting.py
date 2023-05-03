@@ -10,7 +10,7 @@ def home_page():
 
     return json_dump
 
-@app.route('/', methods=['GET'])
+@app.route('/user', methods=['GET'])
 def request_page():
     user_input = str(request.args.get('user'))
 
@@ -20,4 +20,4 @@ def request_page():
     return json_dump
 
 if __name__ == '__main__':
-    app.run(port=7777)
+    app.run(port=7765)

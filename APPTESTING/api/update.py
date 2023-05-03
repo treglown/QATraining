@@ -3,7 +3,7 @@ import json
 import uuid
 import datetime
 import boto3
-from .helper import respond, parse_username_from_claims
+from helper import respond, parse_username_from_claims
 
 def handler(event, context):
     data = None
@@ -57,7 +57,7 @@ def update(client, user_id, data, table_name):
         ExpressionAttributeNames=ex_attr_name,
         ExpressionAttributeValues=ex_attr_value,
         Key={
-            'userId': user_id
+            'userId': user_id,
             'todoId': data['todoId'],
         },
         UpdateExpression='SET {}'.format(', '.join(update_exp_lst)))
