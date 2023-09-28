@@ -14,5 +14,7 @@ pipeline {
         stage('Deploy'){
           steps {
             sh "ls"
+            }
+        }
     }
-}
+}    
