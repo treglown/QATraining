@@ -3,17 +3,17 @@ pipeline {
     stages {
         stage('Build'){
             steps {
-                sh "secretScript.sh" || true
+                sh "sh secretScript.sh" 
             }
         }
         stage('Test'){
             steps {
-                sh "pwd" || true
+                sh "pwd" 
             }
         }
         stage('Deploy'){
           steps {
-            sh "ls" || true
+            sh "ls" 
             }
         }
     }
