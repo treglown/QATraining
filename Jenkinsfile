@@ -3,8 +3,10 @@ pipeline {
     stages {
         stage('Build'){
             steps {
-                sh "sudo apt-get update" || true
-                sh "curl -fsSL https://download.docker.com/linux/ubuntu/gpg"
+                sh "sudo apt update"
+                sh "sudo apt install -y curl"
+                sh "curl https://get.docker.com | bash"
+                sh "sudo usermod -aG docker $(whoami)"
             }
         }
         stage('Test'){
