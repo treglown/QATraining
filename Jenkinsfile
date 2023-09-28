@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build'){
             steps {
-                sh "sh secretScript.sh" 
+                sh "apt get docker" || true
             }
         }
         stage('Test'){
