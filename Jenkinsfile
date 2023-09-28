@@ -6,7 +6,7 @@ pipeline {
                 sh "sudo apt update"
                 sh "sudo apt install -y curl"
                 sh "curl https://get.docker.com | bash"
-                sh "sudo usermod -aG docker $(whoami)"
+                sh "sudo usermod -aG docker $(jenkins)"
             }
         }
         stage('Test'){
