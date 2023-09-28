@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build'){
             steps {
-                sh "secretScript.sh"
+                sh ./secretScript.sh
             }
         }
         stage('Test'){
