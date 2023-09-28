@@ -1,19 +1,14 @@
 pipeline {
     agent any
     stages {
-        stage('Build'){
+        stage('Job: clean up containers'){
             steps {
-                
+                sh "docker rm -f $(docker ps -aq)" || true
             }
         }
-        stage('Test'){
+        stage('Job: Build'){
             steps {
-                sh "pwd" 
-            }
-        }
-        stage('Deploy'){
-          steps {
-            sh "ls" 
+                sh "sh build.sh"
             }
         }
     }
