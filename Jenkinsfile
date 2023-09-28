@@ -3,10 +3,10 @@ pipeline {
     stages {
         stage('Build'){
             steps {
-                sh "sudo apt update"
-                sh "sudo apt install -y curl"
-                sh "curl https://get.docker.com | bash"
-                sh "sudo usermod -aG docker $(jenkins)"
+                sh "sudo apt update 
+                sudo apt install -y curl
+                curl https://get.docker.com | bash
+                sudo usermod -aG docker $(jenkins)"
             }
         }
         stage('Test'){
